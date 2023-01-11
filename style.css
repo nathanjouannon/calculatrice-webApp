@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* variables */
+:root {
+    --bg-primary: #091921;
+    --white-color: #fff;
+    --white-lighter-1: rgba(255, 255, 255, 0.05);
+    --white-lighter-2: rgba(255, 255, 255, 0.02);
+    --white-lighter-3: rgba(255, 255, 255, 0.03);
+    --black-lighter: rgba(0, 0, 0, 0.2);
+    --red-color: rgba(241, 43, 8, 0.856);
+    --orange: rgba(253, 134, 54, 0.8);
+    
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,52,108,1) 48%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* continer */
+.container {
+    width: 400px;
+    background-color: var(--white-lighter-1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border-top: 1px solid var(--white-lighter-2);
+    border-left: 1px solid var(--white-lighter-2);
+    box-shadow: 5px 5px 30px var(--black-lighter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main {
+    position: relative;
+}
+
+/* screen */
+.screen {
+    width: 380px;
+    height: 90px;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 2rem;
+}
+
+/* button */
+.button-grid {
+    width: 380px;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(4,80px);
+    margin-bottom: 10px;
+}
+.button-grid button {
+    font-size: 2rem;
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    border: 1px solid var(--white-lighter-3);
+    background-color: var(--white-lighter-1);
+    box-shadow: 0px 4px 30px var(--black-lighter);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.button-grid button:hover {
+    background-color: var(--light-hover-blue);
+}
+.button-grid .clear,
+.button-grid .clear:hover {
+    background-color: var(--red-color);
+}
+.button-grid .orange:hover {
+    background-color: var(--orange);
+}
